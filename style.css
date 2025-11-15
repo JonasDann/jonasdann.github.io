@@ -1,0 +1,52 @@
+html {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    max-width: 600pt;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 900;
+}
+
+.profile-left {
+    width: 200pt;
+    float: left;
+}
+
+.profile-right {
+    width: 400pt;
+    margin-left: 200pt;
+}
+
+.call-to-action {
+    font-weight: 700;
+}
+
+a {
+    color: oklch(51.15% 0.204 260.17);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.publication-meta i {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.publication {
+    margin-bottom: 12pt;
+}
+
+.year i {
+    font-weight: 900;
+    font-style: normal;
+}

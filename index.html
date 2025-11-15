@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Jonas Dann - Personal Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonas Dann">
+    <meta name="keywords" content="Jonas Dann, ETH Zurich, Systems Group, DINFK, postdoctoral researcher, hardware specialization, heterogeneous computing, data management systems">
+    <meta name="description" content="My (Jonas Dann) personal website and academic profile. I am a postdoctoral researcher in the Systems Group at ETH Zürich. My work focuses on heterogeneous computing systems and hardware specialization for data science workloads.">
+
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <link rel="canonical" href="https://dann.io">
+
+    <link rel="icon" type="image/jpg" sizes="any" href="profile.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jonas Dann</h1>
+    </header>
+
+    <section id="about">
+        <div class="profile-left">
+            <img src="profile.jpg" width="200pt" alt="Profile Photo">
+            <a href="mailto:jonas.dann@inf.ethz.ch">jonas.dann@inf.ethz.ch</a>
+            <div class="social-links">
+                <div><i class="fa-solid fa-file"></i> <a href="cv-jonas-dann.pdf">CV</a></div>
+                <div><i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.de/citations?user=JH0ZhTwAAAAJ&hl=en">Scholar</a></div>
+                <div><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/jonas-dann-463548197/"> LinkedIn</a></div>
+            </div>
+        </div>
+        <div class="profile-right">
+            <p>
+                I am a postdoctoral researcher in the <a href="https://systems.ethz.ch">Systems Group</a> at <a href="https://ethz.ch/en.html">ETH Zurich</a> with Professor <a href="https://people.inf.ethz.ch/alonso/">Gustavo Alonso</a>. My research focuses on heterogeneous computing systems and hardware specialization for data science workloads. The mid-term goal of my research is to revisit the idea of the database machine, a specialized computer architecture for data management, in the modern context of cloud and AI.
+            </p>
+            <p>
+                I completed my Ph.D. in Computer Science summa cum laude at <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a> in cooperation with the HANA Database Campus at SAP, advised by Professor <a href="https://hawaii.ziti.uni-heidelberg.de/members/holger_froening/">Holger Fröning</a>. My <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/34303/1/final.pdf">dissertation</a> was on hardware specialization for non-relational database management systems. I earned my M.Sc. in Computer Science at Karlsruhe Institute of Technology in 2019 and my B.Sc. in Applied Computer Science in 2016 at DHBW Mannheim.
+            </p>
+            <p class="call-to-action">
+                I am actively looking for tenure-track assistant professorships at the moment. If you are interested in working with me, please send me an email (<a href="mailto:jonas.dann@inf.ethz.ch">jonas.dann@inf.ethz.ch</a>).
+            </p>
+        </div>
+    </section>
+
+    <section id="open-source">
+        <h2>Open Source</h2>
+
+        <div>
+            <a href="https://github.com/fpgasystems/Coyote">Coyote</a> &mdash; The operating system for FPGAs
+        </div>
+        <div>
+            <a href="https://gitlab.inf.ethz.ch/PUB-SYSTEMS/eth-dataprocessing/Maximus">Maximus</a> &mdash; Heterogeneous query engine
+        </div>
+        <div>
+            <a href="https://github.com/fpgasystems/libstf">libSTF</a> &mdash; Standard library for hardware design
+        </div>
+        
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://arxiv.org/pdf/2402.17559">GraphMatch: Subgraph Query Processing on Steroids.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Tobias Götz, Daniel Ritter, Jana Giceva, Holger Fröning. In SIGMOD, 2026.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://arxiv.org/abs/2504.21538">Coyote v2: Raising the Level of Abstraction for Data Center FPGAs.</a>
+            </div>
+            <div class="publication-meta">
+                Benjamin Ramhorst, Dario Korolija, Maximilian Heer, <i>Jonas Dann</i>, Luhao Liu, Gustavo Alonso. In SOSP, 2025.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.acm.org/doi/10.14778/3749646.3749698">Powerful GPUs or Fast Interconnects: Analyzing Relational Workloads on Modern GPUs.</a>
+            </div>
+            <div class="publication-meta">
+                Marko Kabic, Bowen Wu, <i>Jonas Dann</i>, Gustavo Alonso. In VLDB, 2025.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://arxiv.org/abs/2507.20412">RoCE BALBOA: Service-enhanced Data Center RDMA for SmartNICs.</a>
+            </div>
+            <div class="publication-meta">
+                Maximilian Heer, Benjamin Ramhorst, Yu Zhu, Luhao Liu, Zhiyi Hu, <i>Jonas Dann</i>, Gustavo Alonso. Under Submission, 2025.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                StreamDedup: Distributed In-line Deduplication for Disaggregated Storage
+            </div>
+            <div class="publication-meta">
+                Jiayong Li, <i>Jonas Dann</i>, Zhenhao He, Gustavo Alonso, Sai Rahul Chalamalasetti, Dejan Milojicic, Lance Evans, Alex Veprinsky, Runbin Shi. Under Submission, 2025.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.acm.org/doi/full/10.1145/3616497">GraphScale: Scalable Processing on FPGAs for HBM and Large Graphs.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Daniel Ritter, Holger Fröning. TRETS, Volume 17, Issue 2, 2024.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3568990">Non-relational Databases on FPGAs: Survey, Design Decisions, Challenges.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Daniel Ritter, Holger Fröning. CSUR, Volume 55, Issue 11, 2023.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3533737.3535094">PipeJSON: Parsing JSON at Line Speed on FPGAs.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Royden Wagner, Daniel Ritter, Christian Färber, Holger Fröning. In DaMoN, 2022.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://ieeexplore.ieee.org/document/10035253">GraphScale: Scalable Bandwidth-Efficient Graph Processing on FPGAs.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Daniel Ritter, Holger Fröning. In FPL, 2022.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3461837.3464512">Demystifying Memory Access Patterns of FPGA-based Graph Processing Accelerators.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Daniel Ritter, Holger Fröning. In GRADES-NDA, 2021.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.gi.de/items/8ce2056c-7d00-4dac-92f2-997c51efd40a">Exploring Memory Access Patterns for Graph Processing Accelerators.</a>
+            </div>
+            <div class="publication-meta">
+                <i>Jonas Dann</i>, Daniel Ritter, Holger Fröning. In BTW, 2021.
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3093742.3093911">Hardware Accelerated Application Integration Processing: Industry Paper.</a>
+            </div>
+            <div class="publication-meta">
+                Daniel Ritter, <i>Jonas Dann</i>, Norman May, Stefanie Rinderle-Ma. In DEBS, 2017.
+            </div>
+        </div>
+    </section>
+
+    <section id="students">
+        <h2>Master Students</h2>
+        
+        <div class="year">
+            <i>2025</i> Philipp Engljähringer, Rasmus Lüscher, Sven Weber, Sven Zanetti, Cedric Caspar, Luca Tagliavini, Filippo Selvatici, Lukasz Wala
+        </div>
+        <div class="year">
+            <i>2024</i> Linus Vogel, Paolo Rondot, Shiduo Xin, Philipp Hardegger
+        </div>
+        <div class="year">
+            <i>2022</i> Felix Göken (Heidelberg University), <a href="https://db.in.tum.de/~goetz/index.shtml?lang=en">Tobias Götz</a> (TU Munich)
+        </div>
+        <div class="year">
+            <i>2021</i> Jan Ahlbrecht (TU Munich)
+        </div>
+        <div class="year">
+            <i>2020</i> <a href="https://scholar.google.com/citations?user=tvltjqQAAAAJ&hl=en">Royden Wagner</a> (Heidelberg University)
+        </div>
+
+        <h2>Bachelor Students</h2>
+
+        <div class="year">
+            <i>2025</i> Sebastian Gavrilas, Jakob Klemm, Manuel Sandmeier
+        </div>
+        <div class="year">
+            <i>2024</i> Michael Egloff, Severin Obrist
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jonas Dann. All rights reserved.</p>
+    </footer>
+</body>
+</html>
