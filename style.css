@@ -1,11 +1,15 @@
 html {
-    font-family: "Playfair Display", serif;
+    font-family: "Inter", serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 body {
-    max-width: 600pt;
+    margin: 0;
+}
+
+.centered-container {
+    max-width: 55rem;
     margin: 0 auto;
 }
 
@@ -14,18 +18,20 @@ h1, h2 {
     font-weight: 900;
 }
 
-.profile-left {
-    width: 200pt;
-    float: left;
+h1 {
+    padding-top: 3rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
 }
 
-.profile-right {
-    width: 400pt;
-    margin-left: 200pt;
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 0;
 }
 
-.call-to-action {
-    font-weight: 700;
+h2.more {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 a {
@@ -38,15 +44,131 @@ a:hover {
 }
 
 i {
-    font-weight: 700;
     font-style: normal;
 }
+
+i.bold {
+    font-weight: 900;
+}
+
+i.blue {
+    color: oklch(51.15% 0.204 260.17);
+}
+
+/**
+ * About section
+ */
+#about {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.profile-left {
+    flex-shrink: 0;
+    width: 16rem;
+    float: left;
+    text-align: center;
+}
+
+.profile-left img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.35rem 0.65rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: inherit;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-right {
+    flex: 1;
+}
+
+.profile-right p:first-child {
+    margin-top: 0;
+}
+
+.call-to-action {
+    font-weight: 700;
+    border-left: 5px solid oklch(63.8% 0.142 52.1);
+    padding-left: 1rem;
+}
+
+/**
+ * Open source
+ */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1rem;
+}
+
+a.card {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px solid black;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    margin-bottom: 0rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+a.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.card-title {
+    margin-bottom: 0.35rem;
+}
+
+.card:hover .card-title {
+    text-decoration: underline;
+}
+
+/**
+ * Publication section
+ */
 
 .publication {
     margin-bottom: 12pt;
 }
 
-.year i {
-    font-weight: 900;
-    font-style: normal;
+/**
+ * Footer
+ */
+
+footer {
+    background-color: #3A3A3C;
+    color: white;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
 }
