@@ -18,11 +18,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="announcement-banner">
+        ACTIVELY SEEKING TENURE-TRACK POSITIONS &nbsp;→&nbsp; <a href="mailto:jonas.dann@inf.ethz.ch">GET IN TOUCH</a>
+    </div>
+
     <header>
         <h1>Jonas Dann</h1>
     </header>
@@ -31,23 +34,20 @@
         <section id="about">
             <div class="profile-left">
                 <img src="resources/profile.jpg" width="200pt" alt="Profile Photo">
+                <div class="profile-role">PostDoc, Systems Group</div>
                 <a href="mailto:jonas.dann@inf.ethz.ch">jonas.dann@inf.ethz.ch</a>
                 <div class="social-links">
-                    <a href="resources/cv-jonas-dann.pdf" class="social-card"><i class="fa-solid fa-file"></i> CV</a>
-                    <a href="https://scholar.google.de/citations?user=JH0ZhTwAAAAJ&hl=en" class="social-card"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
-                    <a href="https://www.linkedin.com/in/jonas-dann-463548197/" class="social-card"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="resources/cv-jonas-dann.pdf" type="application/pdf" title="Curriculum Vitae (PDF) – Jonas Dann">CV</a> | <a href="https://scholar.google.de/citations?user=JH0ZhTwAAAAJ&hl=en">Google Scholar</a> | <a href="https://www.linkedin.com/in/jonas-dann-463548197/">LinkedIn</a>
                 </div>
             </div>
             <div class="profile-right">
                 <p>
-                    I am a postdoctoral researcher in the <a href="https://systems.ethz.ch">Systems Group</a> at <a href="https://ethz.ch/en.html">ETH Zurich</a> with Professor <a href="https://people.inf.ethz.ch/alonso/">Gustavo Alonso</a>. My research focuses on heterogeneous computing systems and hardware specialization for data processing in the cloud. I currently work on data processing SmartNICs for the cloud, hardware-software co-design for analytical query execution accelerators, and infrastructure for FPGAs.
+                    I am a postdoctoral researcher in the <a href="https://systems.ethz.ch">Systems Group</a> at <a href="https://ethz.ch/en.html">ETH Zurich</a> with <a href="https://people.inf.ethz.ch/alonso/">Prof. Gustavo Alonso</a>. My research focuses on heterogeneous computing systems and hardware specialization for data processing in the cloud. I currently work on data processing SmartNICs for the cloud, hardware-software co-design for analytical query execution accelerators, and infrastructure for FPGAs in the data center.
                 </p>
                 <p>
-                    I completed my Ph.D. in Computer Science with summa cum laude at <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a> in cooperation with the HANA Database Campus at SAP, advised by Professor <a href="https://hawaii.ziti.uni-heidelberg.de/members/holger_froening/">Holger Fröning</a>. My <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/34303/1/final.pdf">dissertation</a> was on hardware specialization for non-relational database management systems. I earned my M.Sc. in Computer Science at Karlsruhe Institute of Technology in 2019 and my B.Sc. in Applied Computer Science in 2016 at DHBW Mannheim.
+                    I completed my Ph.D. in computer science summa cum laude at <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a> in cooperation with the HANA Database Campus at SAP, advised by <a href="https://hawaii.ziti.uni-heidelberg.de/members/holger_froening/">Prof. Holger Fröning</a>. My <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/34303/1/final.pdf">dissertation</a> was on hardware specialization for non-relational database management systems. I earned my M.Sc. in Computer Science at Karlsruhe Institute of Technology in 2019 and my B.Sc. in Applied Computer Science at DHBW Mannheim in 2016.
                 </p>
-                <p class="call-to-action">
-                    I am actively looking for tenure-track assistant professorships. If you are interested in working with me, please send me an email (<a href="mailto:jonas.dann@inf.ethz.ch">jonas.dann@inf.ethz.ch</a>).
-                </p>
+                <a href="mailto:jonas.dann@inf.ethz.ch" class="card card-button">Work with me</a>
             </div>
         </section>
 
@@ -55,23 +55,35 @@
             <h2 class="more">Open Source Projects</h2>
 
             <div class="card-grid">
+                <a href="https://github.com/celeris-labs/oasis" class="card">
+                    <div class="card-title"><i class="bold">Oasis</i> [15] &mdash; <i class="accent">github.com/celeris-labs/oasis</i></div>
+                    <div class="card-description">Data processing SmartNIC that hides the cost of querying Parquet files in the datapath.</div>
+                </a>
                 <a href="https://github.com/fpgasystems/Coyote" class="card">
-                    <div class="card-title"><i class="bold">Coyote</i> [9] &mdash; <i class="blue">github.com/fpgasystems/Coyote</i></div>
+                    <div class="card-title"><i class="bold">Coyote</i> [9] &mdash; <i class="accent">github.com/fpgasystems/Coyote</i></div>
                     <div class="card-description">The operating system for FPGAs providing high-level abstractions and portability.</div>
                 </a>
-                <a href="https://gitlab.inf.ethz.ch/PUB-SYSTEMS/eth-dataprocessing/Maximus" class="card">
-                    <div class="card-title"><i class="bold">Maximus</i> [8] &mdash; <i class="blue">https://gitlab.inf.ethz.ch/...</i></div>
-                    <div class="card-description">Heterogeneous analytical query engine that leverages CPUs, GPUs, and FPGAs.</div>
-                </a>
                 <a href="https://github.com/fpgasystems/libstf" class="card">
-                    <div class="card-title"><i class="bold">libSTF</i> &mdash; <i class="blue">https://github.com/fpgasystems/libstf</i></div>
+                    <div class="card-title"><i class="bold">libSTF</i> &mdash; <i class="accent">https://github.com/fpgasystems/libstf</i></div>
                     <div class="card-description">Standard library for hardware design for streaming data processing on FPGAs.</div>
+                </a>
+                <a href="https://gitlab.inf.ethz.ch/PUB-SYSTEMS/eth-dataprocessing/Maximus" class="card">
+                    <div class="card-title"><i class="bold">Maximus</i> [8] &mdash; <i class="accent">https://gitlab.inf.ethz.ch/...</i></div>
+                    <div class="card-description">Heterogeneous analytical query engine that leverages CPUs, GPUs, and FPGAs.</div>
                 </a>
             </div>
         </section>
 
         <section id="publications">
             <h2 class="more">Selected Publications</h2>
+            <div class="publication">
+                <div class="publication-title">
+                    [15] <a href="https://arxiv.org/pdf/2608.02268">Oasis: Hiding the Cost of Querying Parquet Files in the Datapath.</a>
+                </div>
+                <div class="publication-meta">
+                    <i class="bold">Jonas Dann</i>, Luca Tagliavini, Gustavo Alonso. Under Submission, 2026.
+                </div>
+            </div>
             <div class="publication">
                 <div class="publication-title">
                     [14] <a href="https://arxiv.org/pdf/2604.15128">SCENIC: Stream Computation-enhanced SmartNIC.</a>
@@ -190,58 +202,65 @@
             <h2>Service</h2>
 
             <div>
-                <i class="bold">VLDB</i> - Reviewer (2026)
+                VLDB Journal &mdash; Reviewer (2026)
             </div>
             <div>
-                <i class="bold">SoCC</i> - Program commitee (2026)
+                VLDB &mdash; Reviewer (2026)
             </div>
             <div>
-                <i class="bold">HCDS workshop</i> @ ASPLOS - Program commitee (2026)
+                SoCC &mdash; Program committee (2026)
             </div>
             <div>
-                <i class="bold">ICPP</i> - External reviewer (2021, 2023)
+                HCDS workshop @ ASPLOS &mdash; Program committee (2026)
             </div>
             <div>
-                <i class="bold">FPL</i> - External reviewer (2021)
+                WI &mdash; External reviewer (2023)
+            </div>
+            <div>
+                ICPP &mdash; External reviewer (2021, 2023)
+            </div>
+            <div>
+                FPL &mdash; External reviewer (2021)
             </div>
         </section>
 
         <section id="students">
-            <h2>Research Assistants</h2>
-            Aaron Schüttpelz (May - June 2026)
-
             <h2>Master Students</h2>
             
             <div class="year">
-                <i class="bold">2026</i> Loris Keist, Nicola Lohr, Andrei Girjoaba, Lukasz Wala
+                <span class="year-label">2026</span><span class="year-names">Luca Tagliavini, Loris Keist, Nicola Lohr, Andrei Girjoaba, Lukasz Wala, Matteo Fornaini, Stoyan Malinin, Vatsal Dixit, Anna Pecheanu (co-supervised with <a href="https://anakli.inf.ethz.ch/">Prof. Ana Klimovic</a>)</span>
             </div>
             <div class="year">
-                <i class="bold">2025</i> Philipp Engljähringer, Rasmus Lüscher, Sven Weber, Sven Zanetti, Cedric Caspar, Luca Tagliavini, Filippo Selvatici
+                <span class="year-label">2025</span><span class="year-names">Philipp Engljähringer, Rasmus Lüscher (co-supervised with <a href="https://cores.inf.ethz.ch/people/michalfriedman/">Prof. Michal Friedman</a>), Sven Weber, Sven Zanetti, Cedric Caspar, Filippo Selvatici (co-supervised with <a href="https://cores.inf.ethz.ch/people/michalfriedman/">Prof. Michal Friedman</a>)</span>
             </div>
             <div class="year">
-                <i class="bold">2024</i> Linus Vogel, Paolo Rondot, Shiduo Xin, Philipp Hardegger
+                <span class="year-label">2024</span><span class="year-names">Linus Vogel, Paolo Rondot, Shiduo Xin, Philipp Hardegger</span>
             </div>
             <div class="year">
-                <i class="bold">2022</i> Felix Göken (Heidelberg University), <a href="https://db.in.tum.de/~goetz/index.shtml?lang=en">Tobias Götz</a> (TU Munich)
+                <span class="year-label">2022</span><span class="year-names">Felix Göken (Heidelberg University), <a href="https://db.in.tum.de/~goetz/index.shtml?lang=en">Tobias Götz</a> (TU Munich)</span>
             </div>
             <div class="year">
-                <i class="bold">2021</i> Jan Ahlbrecht (TU Munich)
+                <span class="year-label">2021</span><span class="year-names">Jan Ahlbrecht (TU Munich)</span>
             </div>
             <div class="year">
-                <i class="bold">2020</i> <a href="https://scholar.google.com/citations?user=tvltjqQAAAAJ&hl=en">Royden Wagner</a> (Heidelberg University)
+                <span class="year-label">2020</span><span class="year-names"><a href="https://scholar.google.com/citations?user=tvltjqQAAAAJ&hl=en">Royden Wagner</a> (Heidelberg University)</span>
             </div>
 
             <h2>Bachelor Students</h2>
 
             <div class="year">
-                <i class="bold">2026</i> Bruce Röttgers, Janos Kreissl, Vincent Franz
+                <span class="year-label">2026</span><span class="year-names">Bruce Röttgers, Janos Kreissl, Vincent Franz, Mehmet Emin Yaksi (Bilkent University), Yunus Emre Kök (Bilkent University), Simon Wieland, Simon Thalmann</span>
             </div>
             <div class="year">
-                <i class="bold">2025</i> Sebastian Gavrilas, Jakob Klemm, Manuel Sandmeier
+                <span class="year-label">2025</span><span class="year-names">Sebastian Gavrilas, Jakob Klemm, Manuel Sandmeier</span>
             </div>
             <div class="year">
-                <i class="bold">2024</i> Michael Egloff, Severin Obrist
+                <span class="year-label">2024</span><span class="year-names">Michael Egloff, Severin Obrist</span>
             </div>
+
+            <h2>Research Assistant</h2>
+
+            Aaron Schüttpelz (May–June 2026)
         </section>
     </div>
 

@@ -1,46 +1,92 @@
+/* MotherDuck-inspired design: sand background, Inter body, Courier Prime headlines */
+
+:root {
+    --sand: #F4EFEA;
+    --white: #ffffff;
+    --black: #000000;
+    --text: #000000;
+    --border: #E1D6CB;
+    --border-dark: #383838;
+    --accent-red: #B7352D; /* ETH Rot, the Systems Group theme color */
+    --accent-red-dark: #8C2822; /* hover state for accent-colored links */
+    --footer-bg: #000000;
+}
+
 html {
-    font-family: "Inter", serif;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    background: var(--sand);
+    color: var(--text);
 }
 
 body {
     margin: 0;
+    font-size: 1.25rem;
 }
 
-.centered-container {
-    max-width: 55rem;
-    margin: 0 auto;
+/* ── Announcement Banner ── */
+
+.announcement-banner {
+    background: var(--accent-red);
+    color: var(--white);
+    text-align: center;
+    padding: 0.55rem 1rem;
+    text-transform: uppercase;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
 }
 
-h1, h2 {
+/* the only underlined link on the page */
+.announcement-banner a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-position: under;
+    font-weight: 700;
+}
+
+/* 3px, not 2px: `auto` already resolves to ~2px here */
+/* white is restated so the generic `a:hover` red doesn't leak in */
+.announcement-banner a:hover {
+    color: var(--white);
+    text-decoration-thickness: 3px;
+}
+
+/* ── Header / Hero ── */
+
+header {
     text-align: center;
     font-weight: 900;
 }
 
 h1 {
-    padding-top: 3rem;
+    font-size: 4rem;
+    font-weight: 900;
+    padding-top: 4rem;
     margin-top: 0;
-    margin-bottom: 3rem;
+    /* 1.5 + #about's 2rem top padding = 3.5rem, 70% of the previous 5rem */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
 }
 
 h2 {
-    margin-top: 2rem;
-    margin-bottom: 0;
-}
-
-h2.more {
+    font-weight: 900;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    text-align: left;
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
 a {
-    color: oklch(51.15% 0.204 260.17);
+    color: var(--accent-red);
     text-decoration: none;
 }
 
 a:hover {
+    color: var(--accent-red-dark);
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 i {
@@ -48,125 +94,200 @@ i {
 }
 
 i.bold {
-    font-weight: 900;
+    font-weight: 700;
 }
 
-i.blue {
-    color: oklch(51.15% 0.204 260.17);
+i.accent {
+    color: var(--accent-red);
 }
 
-/**
- * About section
- */
+/* ── Centered Container ── */
+
+.centered-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ── About Section ── */
+
+/* sections carry no vertical padding of their own: the gap between them is
+   the h2's 3rem margin-top, the same gap the students subsections get */
 #about {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     align-items: flex-start;
+    padding: 2rem 0 0;
 }
 
 .profile-left {
     flex-shrink: 0;
     width: 16rem;
-    float: left;
     text-align: center;
 }
 
 .profile-left img {
+    /* border-box, else the 2px border makes the photo 4px wider than the
+       column and its center no longer matches the centered links below */
+    box-sizing: border-box;
     width: 100%;
-    margin-bottom: 1rem;
+    /* 0.6rem + the ~5px inline descender below the image = a 14.6px gap,
+       70% of the 21px it was at 1rem */
+    margin-bottom: 0.6rem;
     border-radius: 50%;
+    border: 2px solid var(--border);
 }
 
+/* 1rem to match the email link below it (see .profile-left a) */
+.profile-role {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-left a {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* no margin of its own: the 0.5rem below the email line is the shared gap
+   between role, email and social links */
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.social-card {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.35rem 0.65rem;
-    border: 2px solid black;
-    border-radius: 10px;
+    margin-top: 0;
     font-size: 0.8rem;
-    color: inherit;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.social-card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+/* .profile-left a makes links block-level; these stay on one line */
+.social-links a {
+    display: inline;
+    margin-bottom: 0;
 }
 
 .profile-right {
     flex: 1;
+    line-height: 1.25;
 }
 
 .profile-right p:first-child {
     margin-top: 0;
 }
 
-.call-to-action {
-    font-weight: 700;
-    border-left: 5px solid oklch(63.8% 0.142 52.1);
-    padding-left: 1rem;
+/* ── Open Source Cards ── */
+
+/* cards end on a hard border, so the 3rem gap reads short: top it up to 4rem */
+#open-source {
+    padding: 0 0 1rem;
 }
 
-/**
- * Open source
- */
 .card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.75rem 1rem;
+    gap: 0.75rem;
 }
 
 a.card {
     display: block;
     padding: 1.25rem 1.5rem;
-    border-radius: 10px;
-    background: #fff;
-    border: 2px solid black;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-    margin-bottom: 0rem;
+    background: var(--white);
+    border: 2px solid var(--black);
+    box-shadow: 0 0 0 var(--black);
+    transition: transform 120ms ease-in-out, box-shadow 120ms ease-in-out;
     text-decoration: none;
-    color: inherit;
+    color: var(--text);
+    position: relative;
+}
+
+a.card::after {
+    content: "→";
+    position: absolute;
+    top: 1.1rem;
+    right: 1.25rem;
+    transition: transform 0.15s ease;
 }
 
 a.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.15);
+    transform: translate(5px, -5px);
+    box-shadow: -5px 5px 0 var(--black);
     text-decoration: none;
 }
 
+/* single-line variant of the card, sized to its text (the "Work with me" CTA);
+   the extra right padding is the room the ::after arrow sits in */
+a.card-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.7rem 3.25rem 0.7rem 1.25rem;
+    font-weight: 600;
+}
+
+a.card-button::after {
+    top: 0.7rem;
+    right: 1.25rem;
+}
+
+a.card:active {
+    transform: none;
+    box-shadow: 0 0 0 var(--black);
+}
+
+a.card:hover::after {
+    transform: translateX(3px);
+}
+
 .card-title {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    padding-right: 1.5rem;
 }
 
-.card:hover .card-title {
-    text-decoration: underline;
+.card-description {
+    line-height: 1.25;
 }
 
-/**
- * Publication section
- */
+/* ── Publications ── */
+
+#publications {
+    padding: 0;
+}
 
 .publication {
-    margin-bottom: 12pt;
+    padding: 0.75rem 0;
 }
 
-/**
- * Footer
- */
+.publication-title {
+    margin-bottom: 0.2rem;
+}
+
+/* ── Service & Students ── */
+
+#service {
+    padding: 0;
+}
+
+/* last section on the page: keep it off the footer */
+#students {
+    padding: 0 0 4rem;
+}
+
+#service > div, .year {
+    padding: 0.2rem 0;
+}
+
+/* the year gets its own column so all name lists start at the same x;
+   the names need their own span, else each inline <a> becomes a grid item */
+.year {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    align-items: baseline;
+}
+
+/* ── Footer ── */
 
 footer {
-    background-color: #3A3A3C;
-    color: white;
-    margin-top: 2rem;
-    padding: 1rem 0;
+    background-color: var(--footer-bg);
+    color: var(--white);
+    margin-top: 0;
+    padding: 1.5rem 0;
 }
 
 footer p {
