@@ -117,7 +117,8 @@ i.accent {
     display: flex;
     gap: 3rem;
     align-items: flex-start;
-    padding: 2rem 0 0;
+    /* 2rem + the h2's 3rem margin-top = a 5rem gap to Open Source Projects */
+    padding: 2rem 0 2rem;
 }
 
 .profile-left {
@@ -138,6 +139,11 @@ i.accent {
     border: 2px solid var(--border);
 }
 
+/* on wide screens the name lives in the page header instead */
+.profile-name {
+    display: none;
+}
+
 /* 1rem to match the email link below it (see .profile-left a) */
 .profile-role {
     font-size: 1rem;
@@ -154,7 +160,7 @@ i.accent {
    between role, email and social links */
 .social-links {
     margin-top: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 /* .profile-left a makes links block-level; these stay on one line */
@@ -234,7 +240,10 @@ a.card:hover::after {
     transform: translateX(3px);
 }
 
+/* the repo URLs are one long unbreakable token: let them wrap so a narrow
+   viewport can't be forced wider than the screen */
 .card-title {
+    overflow-wrap: anywhere;
     margin-bottom: 0.4rem;
     font-weight: 600;
     padding-right: 1.5rem;
@@ -292,4 +301,78 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* ── Small Screens ── */
+
+/* two card columns get cramped by the repo URLs well before phone width */
+@media (max-width: 50rem) {
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 50rem) {
+    body {
+        font-size: 1rem;
+    }
+
+    .centered-container {
+        padding: 0 1.25rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        padding-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+    }
+
+    /* the name moves in beside the photo, so the page header goes away */
+    header {
+        display: none;
+    }
+
+    .profile-name {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-top: 0;
+        margin: 0 0 0.3rem;
+    }
+
+    /* photo on the left, the lines that sat under it stacked beside it */
+    #about {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0 1.5rem;
+    }
+
+    .profile-left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .profile-left img {
+        /* 10rem is the widest that still leaves the email room for one line
+           on a 390px screen */
+        width: 9rem;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    /* the three lines read as one tight block beside the photo */
+    .profile-meta .profile-role,
+    .profile-meta > a {
+        margin-bottom: 0.15rem;
+    }
+
 }
